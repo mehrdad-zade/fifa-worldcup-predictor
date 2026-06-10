@@ -1,77 +1,77 @@
 {
-  "_note": "api_football_id values are approximate placeholders. Run scripts/lookup_team_ids.py to populate verified IDs. Groups reflect the December 2023 WC 2026 draw — verify against official FIFA records.",
+  "_note": "api_football_id values are approximate — run scripts/lookup_team_ids.py to verify. fbref_squad_id is the 8-char hex FBref internal ID found in the squad URL. fbref_url_name overrides the team name in the FBref URL slug for teams where FBref uses a different name than our display name.",
   "groups": {
     "A": [
-      {"name": "USA",         "api_football_id": 2,   "fbref_slug": "united-states", "transfermarkt_id": 3505, "confederation": "CONCACAF"},
-      {"name": "Argentina",   "api_football_id": 6,   "fbref_slug": "argentina",     "transfermarkt_id": 3437, "confederation": "CONMEBOL"},
-      {"name": "South Korea", "api_football_id": 20,  "fbref_slug": "south-korea",   "transfermarkt_id": 3804, "confederation": "AFC"},
-      {"name": "Morocco",     "api_football_id": 32,  "fbref_slug": "morocco",       "transfermarkt_id": 3817, "confederation": "CAF"}
+      {"name": "USA",         "fbref_url_name": "United-States", "api_football_id": 2,   "fbref_squad_id": "0f66725b", "transfermarkt_id": 3505, "confederation": "CONCACAF"},
+      {"name": "Argentina",   "api_football_id": 6,   "fbref_squad_id": "f9fddd6e", "transfermarkt_id": 3437, "confederation": "CONMEBOL"},
+      {"name": "South Korea", "fbref_url_name": "Korea-Republic", "api_football_id": 20,  "fbref_squad_id": "473f0fbf", "transfermarkt_id": 3804, "confederation": "AFC"},
+      {"name": "Morocco",     "api_football_id": 32,  "fbref_squad_id": "af41ccda", "transfermarkt_id": 3817, "confederation": "CAF"}
     ],
     "B": [
-      {"name": "Mexico",      "api_football_id": 16,  "fbref_slug": "mexico",        "transfermarkt_id": 3457, "confederation": "CONCACAF"},
-      {"name": "Brazil",      "api_football_id": 24,  "fbref_slug": "brazil",        "transfermarkt_id": 3439, "confederation": "CONMEBOL"},
-      {"name": "Japan",       "api_football_id": 15,  "fbref_slug": "japan",         "transfermarkt_id": 3819, "confederation": "AFC"},
-      {"name": "Senegal",     "api_football_id": 34,  "fbref_slug": "senegal",       "transfermarkt_id": 3827, "confederation": "CAF"}
+      {"name": "Mexico",      "api_football_id": 16,  "fbref_squad_id": "b009a548", "transfermarkt_id": 3457, "confederation": "CONCACAF"},
+      {"name": "Brazil",      "api_football_id": 24,  "fbref_squad_id": "304635c3", "transfermarkt_id": 3439, "confederation": "CONMEBOL"},
+      {"name": "Japan",       "api_football_id": 15,  "fbref_squad_id": "ffcf1690", "transfermarkt_id": 3819, "confederation": "AFC"},
+      {"name": "Senegal",     "api_football_id": 34,  "fbref_squad_id": "9ab5c684", "transfermarkt_id": 3827, "confederation": "CAF"}
     ],
     "C": [
-      {"name": "Canada",      "api_football_id": 94,  "fbref_slug": "canada",        "transfermarkt_id": 3476, "confederation": "CONCACAF"},
-      {"name": "Colombia",    "api_football_id": 12,  "fbref_slug": "colombia",      "transfermarkt_id": 3444, "confederation": "CONMEBOL"},
-      {"name": "Iran",        "api_football_id": 29,  "fbref_slug": "iran",          "transfermarkt_id": 3800, "confederation": "AFC"},
-      {"name": "Ivory Coast", "api_football_id": 118, "fbref_slug": "ivory-coast",   "transfermarkt_id": 3822, "confederation": "CAF"}
+      {"name": "Canada",      "api_football_id": 94,  "fbref_squad_id": "9c6d90a0", "transfermarkt_id": 3476, "confederation": "CONCACAF"},
+      {"name": "Colombia",    "api_football_id": 12,  "fbref_squad_id": "ab73cfe5", "transfermarkt_id": 3444, "confederation": "CONMEBOL"},
+      {"name": "Iran",        "fbref_url_name": "IR-Iran", "api_football_id": 29,  "fbref_squad_id": "6a08f71e", "transfermarkt_id": 3800, "confederation": "AFC"},
+      {"name": "Ivory Coast", "fbref_url_name": "Cote-dIvoire", "api_football_id": 118, "fbref_squad_id": "24772b12", "transfermarkt_id": 3822, "confederation": "CAF"}
     ],
     "D": [
-      {"name": "France",      "api_football_id": 2,   "fbref_slug": "france",        "transfermarkt_id": 3377, "confederation": "UEFA"},
-      {"name": "Ecuador",     "api_football_id": 44,  "fbref_slug": "ecuador",       "transfermarkt_id": 3445, "confederation": "CONMEBOL"},
-      {"name": "Australia",   "api_football_id": 26,  "fbref_slug": "australia",     "transfermarkt_id": 3791, "confederation": "AFC"},
-      {"name": "Nigeria",     "api_football_id": 38,  "fbref_slug": "nigeria",       "transfermarkt_id": 3821, "confederation": "CAF"}
+      {"name": "France",      "api_football_id": 2,   "fbref_squad_id": "b1b36dcd", "transfermarkt_id": 3377, "confederation": "UEFA"},
+      {"name": "Ecuador",     "api_football_id": 44,  "fbref_squad_id": "123acaf8", "transfermarkt_id": 3445, "confederation": "CONMEBOL"},
+      {"name": "Australia",   "api_football_id": 26,  "fbref_squad_id": "b90bf4f9", "transfermarkt_id": 3791, "confederation": "AFC"},
+      {"name": "Nigeria",     "api_football_id": 38,  "fbref_squad_id": "10abc743", "transfermarkt_id": 3821, "confederation": "CAF"}
     ],
     "E": [
-      {"name": "Spain",       "api_football_id": 9,   "fbref_slug": "spain",         "transfermarkt_id": 3375, "confederation": "UEFA"},
-      {"name": "Uruguay",     "api_football_id": 7,   "fbref_slug": "uruguay",       "transfermarkt_id": 3443, "confederation": "CONMEBOL"},
-      {"name": "Saudi Arabia","api_football_id": 46,  "fbref_slug": "saudi-arabia",  "transfermarkt_id": 3807, "confederation": "AFC"},
-      {"name": "Cameroon",    "api_football_id": 108, "fbref_slug": "cameroon",      "transfermarkt_id": 3814, "confederation": "CAF"}
+      {"name": "Spain",       "api_football_id": 9,   "fbref_squad_id": "b561dd30", "transfermarkt_id": 3375, "confederation": "UEFA"},
+      {"name": "Uruguay",     "api_football_id": 7,   "fbref_squad_id": "870e020f", "transfermarkt_id": 3443, "confederation": "CONMEBOL"},
+      {"name": "Saudi Arabia","api_football_id": 46,  "fbref_squad_id": "6e84edac", "transfermarkt_id": 3807, "confederation": "AFC"},
+      {"name": "Cameroon",    "api_football_id": 108, "fbref_squad_id": "896550da", "transfermarkt_id": 3814, "confederation": "CAF"}
     ],
     "F": [
-      {"name": "Germany",     "api_football_id": 4,   "fbref_slug": "germany",       "transfermarkt_id": 3376, "confederation": "UEFA"},
-      {"name": "Venezuela",   "api_football_id": 0,   "fbref_slug": "venezuela",     "transfermarkt_id": 3451, "confederation": "CONMEBOL"},
-      {"name": "Iraq",        "api_football_id": 40,  "fbref_slug": "iraq",          "transfermarkt_id": 3799, "confederation": "AFC"},
-      {"name": "Egypt",       "api_football_id": 36,  "fbref_slug": "egypt",         "transfermarkt_id": 3815, "confederation": "CAF"}
+      {"name": "Germany",     "api_football_id": 4,   "fbref_squad_id": "c1e40422", "transfermarkt_id": 3376, "confederation": "UEFA"},
+      {"name": "Venezuela",   "api_football_id": 0,   "fbref_squad_id": "df384984", "transfermarkt_id": 3451, "confederation": "CONMEBOL"},
+      {"name": "Iraq",        "api_football_id": 40,  "fbref_squad_id": "ec843efd", "transfermarkt_id": 3799, "confederation": "AFC"},
+      {"name": "Egypt",       "api_football_id": 36,  "fbref_squad_id": "b8889750", "transfermarkt_id": 3815, "confederation": "CAF"}
     ],
     "G": [
-      {"name": "England",     "api_football_id": 26,  "fbref_slug": "england",       "transfermarkt_id": 3411, "confederation": "UEFA"},
-      {"name": "Jamaica",     "api_football_id": 96,  "fbref_slug": "jamaica",       "transfermarkt_id": 3490, "confederation": "CONCACAF"},
-      {"name": "Jordan",      "api_football_id": 161, "fbref_slug": "jordan",        "transfermarkt_id": 3801, "confederation": "AFC"},
-      {"name": "Ghana",       "api_football_id": 58,  "fbref_slug": "ghana",         "transfermarkt_id": 3816, "confederation": "CAF"}
+      {"name": "England",     "api_football_id": 26,  "fbref_squad_id": "1862c019", "transfermarkt_id": 3411, "confederation": "UEFA"},
+      {"name": "Jamaica",     "api_football_id": 96,  "fbref_squad_id": "189bdbbd", "transfermarkt_id": 3490, "confederation": "CONCACAF"},
+      {"name": "Jordan",      "api_football_id": 161, "fbref_squad_id": "3e22f0fa", "transfermarkt_id": 3801, "confederation": "AFC"},
+      {"name": "Ghana",       "api_football_id": 58,  "fbref_squad_id": "9349828d", "transfermarkt_id": 3816, "confederation": "CAF"}
     ],
     "H": [
-      {"name": "Portugal",    "api_football_id": 38,  "fbref_slug": "portugal",      "transfermarkt_id": 3380, "confederation": "UEFA"},
-      {"name": "Honduras",    "api_football_id": 95,  "fbref_slug": "honduras",      "transfermarkt_id": 3485, "confederation": "CONCACAF"},
-      {"name": "Uzbekistan",  "api_football_id": 0,   "fbref_slug": "uzbekistan",    "transfermarkt_id": 0,    "confederation": "AFC"},
-      {"name": "South Africa","api_football_id": 78,  "fbref_slug": "south-africa",  "transfermarkt_id": 3826, "confederation": "CAF"}
+      {"name": "Portugal",    "api_football_id": 38,  "fbref_squad_id": "4a1b4ea8", "transfermarkt_id": 3380, "confederation": "UEFA"},
+      {"name": "Honduras",    "api_football_id": 95,  "fbref_squad_id": "a1f66233", "transfermarkt_id": 3485, "confederation": "CONCACAF"},
+      {"name": "Uzbekistan",  "api_football_id": 0,   "fbref_squad_id": "cd389e75", "transfermarkt_id": 0,    "confederation": "AFC"},
+      {"name": "South Africa","api_football_id": 78,  "fbref_squad_id": "506f1741", "transfermarkt_id": 3826, "confederation": "CAF"}
     ],
     "I": [
-      {"name": "Netherlands", "api_football_id": 33,  "fbref_slug": "netherlands",   "transfermarkt_id": 3378, "confederation": "UEFA"},
-      {"name": "Panama",      "api_football_id": 75,  "fbref_slug": "panama",        "transfermarkt_id": 3489, "confederation": "CONCACAF"},
-      {"name": "New Zealand", "api_football_id": 210, "fbref_slug": "new-zealand",   "transfermarkt_id": 3837, "confederation": "OFC"},
-      {"name": "DR Congo",    "api_football_id": 0,   "fbref_slug": "dr-congo",      "transfermarkt_id": 0,    "confederation": "CAF"}
+      {"name": "Netherlands", "api_football_id": 33,  "fbref_squad_id": "5bb5024a", "transfermarkt_id": 3378, "confederation": "UEFA"},
+      {"name": "Panama",      "api_football_id": 75,  "fbref_squad_id": "6061a82d", "transfermarkt_id": 3489, "confederation": "CONCACAF"},
+      {"name": "New Zealand", "api_football_id": 210, "fbref_squad_id": "259855f0", "transfermarkt_id": 3837, "confederation": "OFC"},
+      {"name": "DR Congo",    "fbref_url_name": "Congo-DR", "api_football_id": 0,   "fbref_squad_id": "9be9f315", "transfermarkt_id": 0,    "confederation": "CAF"}
     ],
     "J": [
-      {"name": "Belgium",     "api_football_id": 1,   "fbref_slug": "belgium",       "transfermarkt_id": 3382, "confederation": "UEFA"},
-      {"name": "Chile",       "api_football_id": 11,  "fbref_slug": "chile",         "transfermarkt_id": 3441, "confederation": "CONMEBOL"},
-      {"name": "Serbia",      "api_football_id": 14,  "fbref_slug": "serbia",        "transfermarkt_id": 3400, "confederation": "UEFA"},
-      {"name": "Scotland",    "api_football_id": 25,  "fbref_slug": "scotland",      "transfermarkt_id": 3388, "confederation": "UEFA"}
+      {"name": "Belgium",     "api_football_id": 1,   "fbref_squad_id": "361422b9", "transfermarkt_id": 3382, "confederation": "UEFA"},
+      {"name": "Chile",       "api_football_id": 11,  "fbref_squad_id": "7fd9c2a2", "transfermarkt_id": 3441, "confederation": "CONMEBOL"},
+      {"name": "Serbia",      "api_football_id": 14,  "fbref_squad_id": "1d6f5c9b", "transfermarkt_id": 3400, "confederation": "UEFA"},
+      {"name": "Scotland",    "api_football_id": 25,  "fbref_squad_id": "602d3994", "transfermarkt_id": 3388, "confederation": "UEFA"}
     ],
     "K": [
-      {"name": "Italy",       "api_football_id": 10,  "fbref_slug": "italy",         "transfermarkt_id": 3379, "confederation": "UEFA"},
-      {"name": "Croatia",     "api_football_id": 3,   "fbref_slug": "croatia",       "transfermarkt_id": 3394, "confederation": "UEFA"},
-      {"name": "Indonesia",   "api_football_id": 0,   "fbref_slug": "indonesia",     "transfermarkt_id": 0,    "confederation": "AFC"},
-      {"name": "Turkey",      "api_football_id": 28,  "fbref_slug": "turkey",        "transfermarkt_id": 3384, "confederation": "UEFA"}
+      {"name": "Italy",       "api_football_id": 10,  "fbref_squad_id": "998c5958", "transfermarkt_id": 3379, "confederation": "UEFA"},
+      {"name": "Croatia",     "api_football_id": 3,   "fbref_squad_id": "7b08e376", "transfermarkt_id": 3394, "confederation": "UEFA"},
+      {"name": "Indonesia",   "api_football_id": 0,   "fbref_squad_id": "270e8684", "transfermarkt_id": 0,    "confederation": "AFC"},
+      {"name": "Turkey",      "fbref_url_name": "Turkiye", "api_football_id": 28,  "fbref_squad_id": "ac6bcf92", "transfermarkt_id": 3384, "confederation": "UEFA"}
     ],
     "L": [
-      {"name": "Switzerland", "api_football_id": 15,  "fbref_slug": "switzerland",   "transfermarkt_id": 3381, "confederation": "UEFA"},
-      {"name": "Poland",      "api_football_id": 24,  "fbref_slug": "poland",        "transfermarkt_id": 3385, "confederation": "UEFA"},
-      {"name": "Denmark",     "api_football_id": 21,  "fbref_slug": "denmark",       "transfermarkt_id": 3383, "confederation": "UEFA"},
-      {"name": "Austria",     "api_football_id": 44,  "fbref_slug": "austria",       "transfermarkt_id": 3389, "confederation": "UEFA"}
+      {"name": "Switzerland", "api_football_id": 15,  "fbref_squad_id": "81021a70", "transfermarkt_id": 3381, "confederation": "UEFA"},
+      {"name": "Poland",      "api_football_id": 24,  "fbref_squad_id": "8912dcf0", "transfermarkt_id": 3385, "confederation": "UEFA"},
+      {"name": "Denmark",     "api_football_id": 21,  "fbref_squad_id": "29a4e4af", "transfermarkt_id": 3383, "confederation": "UEFA"},
+      {"name": "Austria",     "api_football_id": 44,  "fbref_squad_id": "d5121f10", "transfermarkt_id": 3389, "confederation": "UEFA"}
     ]
   }
 }

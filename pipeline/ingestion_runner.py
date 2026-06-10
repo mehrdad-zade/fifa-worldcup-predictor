@@ -57,7 +57,7 @@ def run_ingestion(dry_run: bool = False, verbose: bool = False) -> None:
                     t["group_code"],
                     t["confederation"],
                     t.get("api_football_id"),
-                    t.get("fbref_slug"),
+                    t.get("fbref_squad_id"),
                     t.get("transfermarkt_id"),
                 ),
             )
@@ -77,16 +77,15 @@ def run_ingestion(dry_run: bool = False, verbose: bool = False) -> None:
         print(f"  [api_football] Fixture fetch failed: {exc}")
 
     # ── Player stats from FBref ────────────────────────────────
+    configured = [t for t in teams if t.get("fbref_squad_id")]
     if verbose:
-        print("Scraping FBref player stats...")
+        print(f"Scraping FBref player stats ({len(configured)}/{len(teams)} teams configured)...")
     for t in teams:
-        slug = t.get("fbref_slug", "")
+        squad_id = t.get("fbref_squad_id", "") or ""
         tid = t.get("api_football_id", 0) or 0
-        if not slug:
-            continue
-        if verbose:
+        if verbose and squad_id:
             print(f"  {t['name']}...")
-        df = scrape_squad(t["name"], slug, tid)
+        df = scrape_squad(t["name"], squad_id or None, tid, t.get("fbref_url_name"))
         if not dry_run and not df.empty:
             execute_sql("DELETE FROM player_stats WHERE team_id = ?", (tid,))
             executemany_sql(
@@ -111,6 +110,12 @@ def run_ingestion(dry_run: bool = False, verbose: bool = False) -> None:
                 "INSERT INTO player_values (team_id, player_name, market_value_eur) VALUES (?, ?, ?)",
                 [(tid, name, val) for name, val in values.items()],
             )
+
+    if not dry_run:
+        from features.feature_matrix import clear_feature_cache
+        from features.group_status import clear_group_status_cache
+        clear_feature_cache()
+        clear_group_status_cache()
 
     print("Ingestion complete." if not dry_run else "Dry-run complete — no changes written.")
 

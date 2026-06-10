@@ -54,6 +54,24 @@ def load_bracket_prediction() -> dict:
     return {}
 
 
+@st.cache_data(ttl=300)
+def load_group_stage_matches() -> dict[str, list[dict]]:
+    """Return {group_code: [match_dict, ...]} with predicted scores per group match."""
+    snapshot = load_latest_snapshot()
+    if snapshot:
+        return snapshot.get("final_bracket_prediction", {}).get("group_stage_matches", {})
+    return {}
+
+
+@st.cache_data(ttl=300)
+def load_predicted_standings() -> dict[str, list[dict]]:
+    """Return {group_code: [team_standing_dict, ...]} sorted by predicted position."""
+    snapshot = load_latest_snapshot()
+    if snapshot:
+        return snapshot.get("final_bracket_prediction", {}).get("predicted_standings", {})
+    return {}
+
+
 @st.cache_data(ttl=600)
 def load_evaluation_metrics() -> pd.DataFrame:
     return query_df(

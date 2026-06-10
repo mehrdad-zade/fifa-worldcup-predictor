@@ -10,7 +10,14 @@ import anthropic
 from config.settings import settings
 from db.database import execute_sql, query_one
 
-_client = anthropic.Anthropic(api_key=settings.anthropic_api_key)
+_client: anthropic.Anthropic | None = None
+
+
+def _get_client() -> anthropic.Anthropic:
+    global _client
+    if _client is None:
+        _client = anthropic.Anthropic(api_key=settings.anthropic_api_key)
+    return _client
 
 _PROMPT_TEMPLATE = """You are a football analyst assistant. Analyse news about the
 national football team "{team_name}" ahead of their FIFA World Cup 2026 match on {match_date}.
@@ -61,7 +68,7 @@ def get_team_news(team_id: int, team_name: str, match_date: str) -> dict:
 def _fetch_from_claude(team_name: str, match_date: str) -> dict:
     prompt = _PROMPT_TEMPLATE.format(team_name=team_name, match_date=match_date)
     try:
-        msg = _client.messages.create(
+        msg = _get_client().messages.create(
             model=settings.claude_model,
             max_tokens=512,
             messages=[{"role": "user", "content": prompt}],

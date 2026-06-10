@@ -1,4 +1,8 @@
 """Streamlit entry point — sidebar navigation between the three pages."""
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
 import streamlit as st
 
 st.set_page_config(
@@ -8,7 +12,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-from ui.pages import match_center, bracket_view, analytics
+from ui.page_modules import match_center, bracket_view, analytics
 
 _PAGES = {
     "⚽ Match Center": match_center,

@@ -5,6 +5,8 @@ Returns: points, goal_differential, goals_for, goals_against, games_played,
 """
 from db.database import query_df
 
+_GROUP_STATUS_CACHE: dict[int, dict] | None = None
+
 _DEFAULT = {
     "points": 0,
     "goal_differential": 0,
@@ -18,9 +20,16 @@ _DEFAULT = {
 
 
 def get_group_status(team_id: int) -> dict:
-    """Return the group status dict for a single team."""
-    all_status = compute_all_group_status()
-    return all_status.get(team_id, {**_DEFAULT})
+    """Return the group status dict for a single team (result is module-cached)."""
+    global _GROUP_STATUS_CACHE
+    if _GROUP_STATUS_CACHE is None:
+        _GROUP_STATUS_CACHE = compute_all_group_status()
+    return _GROUP_STATUS_CACHE.get(team_id, {**_DEFAULT})
+
+
+def clear_group_status_cache() -> None:
+    global _GROUP_STATUS_CACHE
+    _GROUP_STATUS_CACHE = None
 
 
 def compute_all_group_status() -> dict[int, dict]:

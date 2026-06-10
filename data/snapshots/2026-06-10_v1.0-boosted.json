@@ -1,0 +1,143 @@
+{
+  "meta": {
+    "simulation_date": "2026-06-10",
+    "model_version": "v1.0-boosted"
+  },
+  "daily_predictions": [],
+  "final_bracket_prediction": {
+    "champion": "South Korea",
+    "champion_id": 20,
+    "champion_probability": 0.082,
+    "runner_up": "Netherlands",
+    "runner_up_id": 33,
+    "top_contenders": [
+      {
+        "team": "South Korea",
+        "team_id": 20,
+        "win_probability": 0.082
+      },
+      {
+        "team": "Netherlands",
+        "team_id": 33,
+        "win_probability": 0.08
+      },
+      {
+        "team": "Uruguay",
+        "team_id": 7,
+        "win_probability": 0.068
+      },
+      {
+        "team": "Belgium",
+        "team_id": 1,
+        "win_probability": 0.068
+      },
+      {
+        "team": "Spain",
+        "team_id": 9,
+        "win_probability": 0.068
+      },
+      {
+        "team": "Ghana",
+        "team_id": 58,
+        "win_probability": 0.066
+      },
+      {
+        "team": "Argentina",
+        "team_id": 6,
+        "win_probability": 0.062
+      },
+      {
+        "team": "Venezuela",
+        "team_id": 22,
+        "win_probability": 0.06
+      }
+    ],
+    "tbd_knockouts": [
+      {
+        "match_code": "R32_1",
+        "stage": "R32",
+        "placeholder_home": "1st Group A",
+        "placeholder_away": "2nd Group B",
+        "resolved_home": "Argentina",
+        "resolved_away": "Senegal",
+        "predicted_winner": "South Korea",
+        "predicted_score": {
+          "home": 1,
+          "away": 0
+        },
+        "actual_winner": null
+      },
+      {
+        "match_code": "R32_3",
+        "stage": "R32",
+        "placeholder_home": "1st Group C",
+        "placeholder_away": "2nd Group D",
+        "resolved_home": "Colombia",
+        "resolved_away": null,
+        "predicted_winner": "South Korea",
+        "predicted_score": {
+          "home": 1,
+          "away": 0
+        },
+        "actual_winner": null
+      },
+      {
+        "match_code": "R32_5",
+        "stage": "R32",
+        "placeholder_home": "1st Group E",
+        "placeholder_away": "2nd Group F",
+        "resolved_home": "Uruguay",
+        "resolved_away": "Venezuela",
+        "predicted_winner": "South Korea",
+        "predicted_score": {
+          "home": 1,
+          "away": 0
+        },
+        "actual_winner": null
+      },
+      {
+        "match_code": "R32_7",
+        "stage": "R32",
+        "placeholder_home": "1st Group G",
+        "placeholder_away": "2nd Group H",
+        "resolved_home": "England",
+        "resolved_away": "Portugal",
+        "predicted_winner": "South Korea",
+        "predicted_score": {
+          "home": 1,
+          "away": 0
+        },
+        "actual_winner": null
+      },
+      {
+        "match_code": "R32_9",
+        "stage": "R32",
+        "placeholder_home": "1st Group I",
+        "placeholder_away": "2nd Group J",
+        "resolved_home": "Netherlands",
+        "resolved_away": "Chile",
+        "predicted_winner": "South Korea",
+        "predicted_score": {
+          "home": 1,
+          "away": 0
+        },
+        "actual_winner": null
+      },
+      {
+        "match_code": "R32_11",
+        "stage": "R32",
+        "placeholder_home": "1st Group K",
+        "placeholder_away": "2nd Group L",
+        "resolved_home": "Croatia",
+        "resolved_away": "Denmark",
+        "predicted_winner": "South Korea",
+        "predicted_score": {
+          "home": 1,
+          "away": 0
+        },
+        "actual_winner": null
+      }
+    ],
+    "n_simulations": 500
+  }
+}
