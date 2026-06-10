@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Environment / secrets
+.env
+*.local.env
+
+# Data (raw and processed are ephemeral; snapshots ARE committed)
+data/raw/
+data/processed/
+
+# SQLite database
+data/*.db
+data/*.db-wal
+data/*.db-shm
+
+# Model artifacts (large binary files — train locally with scripts/train_models.py)
+models/artifacts/
+*.pkl
+*.joblib
+*.model
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Mypy
+.mypy_cache/
+
+# Optuna study databases
+optuna_studies/
+
+# Jupyter
+.ipynb_checkpoints/
