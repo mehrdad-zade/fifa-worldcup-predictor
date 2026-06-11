@@ -147,6 +147,32 @@ def load_all_results() -> dict[str, str]:
 
 
 @st.cache_data(ttl=300)
+def load_all_prediction_probs() -> dict[str, dict]:
+    """Return {fixture_id: {hw, d, aw}} using the most recent prediction per fixture."""
+    df = query_df(
+        """
+        SELECT p.fixture_id, p.prob_home_win, p.prob_draw, p.prob_away_win
+        FROM predictions p
+        JOIN (
+            SELECT fixture_id, MAX(created_at) AS latest
+            FROM predictions
+            GROUP BY fixture_id
+        ) lp ON p.fixture_id = lp.fixture_id AND p.created_at = lp.latest
+        """
+    )
+    if df.empty:
+        return {}
+    return {
+        row["fixture_id"]: {
+            "hw": float(row["prob_home_win"]),
+            "d": float(row["prob_draw"]),
+            "aw": float(row["prob_away_win"]),
+        }
+        for _, row in df.iterrows()
+    }
+
+
+@st.cache_data(ttl=300)
 def load_all_predictions() -> dict[str, str]:
     """Return {fixture_id: 'H-A'} using the most recently created prediction per fixture."""
     df = query_df(

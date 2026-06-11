@@ -6,7 +6,6 @@ player_rating is derived from FBref SCA/GCA composite, normalised to [0, 1].
 import numpy as np
 
 from db.database import query_df
-from features.squad_fitness import get_squad_fitness
 
 _TOP_N = 23
 

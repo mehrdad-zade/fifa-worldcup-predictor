@@ -20,7 +20,7 @@ from models.lgbm_model import LGBMModel
 _ARTIFACTS = Path("models/artifacts")
 
 
-def load_historical_matches(exclude_season: int | None = None) -> tuple[pd.DataFrame, pd.Series, list[dict]]:
+def load_historical_matches() -> tuple[pd.DataFrame, pd.Series, list[dict]]:
     """Load completed fixtures + results from DB as (X, y, raw_matches)."""
     sql = """
         SELECT

@@ -11,7 +11,12 @@ import pandas as pd
 import streamlit as st
 
 from config.fixtures import FIXTURES
-from ui.data_loader import load_all_results, load_all_predictions, load_knockout_matchups
+from ui.data_loader import (
+    load_all_results,
+    load_all_predictions,
+    load_all_prediction_probs,
+    load_knockout_matchups,
+)
 
 
 # ── Build DataFrame from shared fixture config ────────────────────────────────
@@ -51,6 +56,15 @@ _ROUND_EMOJI = {
 
 _GROUP_OPTIONS = list("ABCDEFGHIJKL") + ["Knockout"]
 
+_PRED_HIGHLIGHT = "background-color: rgba(255, 200, 0, 0.12)"
+
+
+def _style_predictions(df: pd.DataFrame, pred_cols: list[str]) -> "pd.io.formats.style.Styler":
+    return df.style.apply(
+        lambda col: [_PRED_HIGHLIGHT if col.name in pred_cols else "" for _ in col],
+        axis=0,
+    )
+
 
 # ── Page ──────────────────────────────────────────────────────────────────────
 
@@ -59,6 +73,7 @@ def render() -> None:
 
     results_map      = load_all_results()
     predictions_map  = load_all_predictions()
+    probs_map        = load_all_prediction_probs()
     ko_matchups      = load_knockout_matchups()
 
     # ── Filters ──────────────────────────────────────────────────────────────
@@ -128,23 +143,30 @@ def render() -> None:
         rnd_df["Predicted"] = rnd_df["fixture_id"].map(predictions_map).fillna("")
 
         if rnd == "Group Stage":
+            rnd_df["HW%"] = rnd_df["fixture_id"].map(lambda fid: probs_map.get(fid, {}).get("hw"))
+            rnd_df["D%"]  = rnd_df["fixture_id"].map(lambda fid: probs_map.get(fid, {}).get("d"))
+            rnd_df["AW%"] = rnd_df["fixture_id"].map(lambda fid: probs_map.get(fid, {}).get("aw"))
+
             display = rnd_df[[
                 "#", "Date", "EST", "Local", "Matchup", "Group",
-                "Result", "Predicted", "Venue", "City",
+                "Result", "Predicted", "HW%", "D%", "AW%", "Venue", "City",
             ]].reset_index(drop=True)
 
             st.dataframe(
-                display,
+                _style_predictions(display, ["Predicted"]),
                 hide_index=True,
                 use_container_width=True,
                 column_config={
-                    "#":         st.column_config.NumberColumn("#",         width="small"),
-                    "Date":      st.column_config.TextColumn("Date",       width="small"),
-                    "EST":       st.column_config.TextColumn("EST",        width="small"),
-                    "Local":     st.column_config.TextColumn("Local",      width="small"),
-                    "Group":     st.column_config.TextColumn("Grp",        width="small"),
-                    "Result":    st.column_config.TextColumn("Result",     width="small"),
-                    "Predicted": st.column_config.TextColumn("Predicted",  width="small"),
+                    "#":         st.column_config.NumberColumn("#",          width="small"),
+                    "Date":      st.column_config.TextColumn("Date",        width="small"),
+                    "EST":       st.column_config.TextColumn("EST",         width="small"),
+                    "Local":     st.column_config.TextColumn("Local",       width="small"),
+                    "Group":     st.column_config.TextColumn("Grp",         width="small"),
+                    "Result":    st.column_config.TextColumn("Result",      width="small"),
+                    "Predicted": st.column_config.TextColumn("Predicted",   width="small"),
+                    "HW%":       st.column_config.ProgressColumn("HW%",     min_value=0, max_value=1, format="%.0f%%", width="small"),
+                    "D%":        st.column_config.ProgressColumn("D%",      min_value=0, max_value=1, format="%.0f%%", width="small"),
+                    "AW%":       st.column_config.ProgressColumn("AW%",     min_value=0, max_value=1, format="%.0f%%", width="small"),
                 },
             )
 
@@ -157,13 +179,17 @@ def render() -> None:
             # Bracket slot description lives in the original Matchup column
             rnd_df["Bracket"] = rnd_df["Matchup"]
 
+            rnd_df["HW%"] = rnd_df["fixture_id"].map(lambda fid: probs_map.get(fid, {}).get("hw"))
+            rnd_df["D%"]  = rnd_df["fixture_id"].map(lambda fid: probs_map.get(fid, {}).get("d"))
+            rnd_df["AW%"] = rnd_df["fixture_id"].map(lambda fid: probs_map.get(fid, {}).get("aw"))
+
             display = rnd_df[[
                 "#", "Date", "EST", "Local", "Predicted Match", "Bracket",
-                "Result", "Predicted", "Venue", "City",
+                "Result", "Predicted", "HW%", "D%", "AW%", "Venue", "City",
             ]].reset_index(drop=True)
 
             st.dataframe(
-                display,
+                _style_predictions(display, ["Predicted Match", "Predicted"]),
                 hide_index=True,
                 use_container_width=True,
                 column_config={
@@ -175,5 +201,8 @@ def render() -> None:
                     "Bracket":          st.column_config.TextColumn("Group",             width="large"),
                     "Result":           st.column_config.TextColumn("Result",            width="small"),
                     "Predicted":        st.column_config.TextColumn("Predicted",         width="small"),
+                    "HW%":              st.column_config.ProgressColumn("HW%",           min_value=0, max_value=1, format="%.0f%%", width="small"),
+                    "D%":               st.column_config.ProgressColumn("D%",            min_value=0, max_value=1, format="%.0f%%", width="small"),
+                    "AW%":              st.column_config.ProgressColumn("AW%",           min_value=0, max_value=1, format="%.0f%%", width="small"),
                 },
             )

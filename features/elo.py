@@ -74,11 +74,3 @@ def _save_elo(team_id: int, elo: float, effective_date: str, reason: str) -> Non
     )
 
 
-def get_all_current_elos() -> dict[int, float]:
-    df = query_df(
-        "SELECT team_id, elo_rating FROM elo_history "
-        "GROUP BY team_id HAVING id = MAX(id)"
-    )
-    if df.empty:
-        return {}
-    return dict(zip(df["team_id"].astype(int), df["elo_rating"].astype(float)))

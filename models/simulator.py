@@ -22,8 +22,6 @@ from models.ensemble import get_ensemble
 class BracketResult:
     champion_probs: dict[int, float]
     finalist_probs: dict[int, float]
-    sf_probs: dict[int, float]
-    r16_probs: dict[int, float]
     most_likely_champion: int
     most_likely_runner_up: int
     n_runs: int
@@ -37,8 +35,6 @@ def simulate_tournament(n_runs: int = 10_000) -> BracketResult:
 
     champion_counts: dict[int, int] = defaultdict(int)
     finalist_counts: dict[int, int] = defaultdict(int)
-    sf_counts: dict[int, int] = defaultdict(int)
-    r16_counts: dict[int, int] = defaultdict(int)
 
     for _ in range(n_runs):
         sim_standings = _simulate_group_stage(group_standings, teams, ensemble)
@@ -52,8 +48,6 @@ def simulate_tournament(n_runs: int = 10_000) -> BracketResult:
         else:
             finalists = semi[:2] if len(semi) >= 2 else semi
 
-        for t in r16_counts:
-            pass
         for t in (finalists or []):
             finalist_counts[t] += 1
         champion = _simulate_one_match(finalists[0], finalists[1], ensemble, "Final") if len(finalists) >= 2 else (finalists[0] if finalists else 0)
@@ -64,8 +58,6 @@ def simulate_tournament(n_runs: int = 10_000) -> BracketResult:
     return BracketResult(
         champion_probs={t: c / total for t, c in champion_counts.items()},
         finalist_probs={t: c / total for t, c in finalist_counts.items()},
-        sf_probs={t: c / total for t, c in sf_counts.items()},
-        r16_probs={t: c / total for t, c in r16_counts.items()},
         most_likely_champion=max(champion_counts, key=champion_counts.get, default=0),
         most_likely_runner_up=_second_highest(champion_counts, finalist_counts),
         n_runs=n_runs,

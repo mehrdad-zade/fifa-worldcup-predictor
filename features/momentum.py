@@ -52,19 +52,3 @@ def get_momentum_score(team_id: int, reference_date: date | None = None) -> floa
         score += multiplier * math.exp(-days_since / _HALF_LIFE_DAYS)
 
     return round(score, 4)
-
-
-def add_trophy_event(
-    team_id: int,
-    tournament_name: str,
-    tournament_type: str,
-    won_date: str,
-) -> None:
-    from db.database import execute_sql
-
-    multiplier = _MULTIPLIERS.get(tournament_type, 1.0)
-    execute_sql(
-        "INSERT INTO trophy_events (team_id, tournament_name, tournament_type, won_date, importance_multiplier) "
-        "VALUES (?, ?, ?, ?, ?)",
-        (team_id, tournament_name, tournament_type, won_date, multiplier),
-    )

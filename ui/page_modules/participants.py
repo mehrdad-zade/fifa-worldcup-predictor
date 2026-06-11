@@ -11,6 +11,7 @@ import streamlit as st
 
 from config.team_profiles import TEAM_PROFILES, TEAM_GROUP
 from db.database import query_df
+from ui.data_loader import load_bracket_prediction, load_predicted_standings
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -30,6 +31,29 @@ def _top3_summary(top3: list[tuple[int, int]]) -> str:
 
 def _top3_count(top3: list[tuple[int, int]]) -> int:
     return len(top3)
+
+
+def _get_win_prob(team_name: str, bracket: dict) -> float | None:
+    for c in bracket.get("top_contenders", []):
+        if c.get("team") == team_name:
+            return float(c["win_probability"])
+    return None
+
+
+def _get_team_elo(team_name: str) -> float | None:
+    row = query_df(
+        """
+        SELECT e.elo_rating FROM elo_history e
+        JOIN teams t ON e.team_id = t.team_id
+        WHERE t.name = ?
+        ORDER BY e.effective_date DESC, e.id DESC
+        LIMIT 1
+        """,
+        (team_name,),
+    )
+    if row.empty:
+        return None
+    return float(row.iloc[0]["elo_rating"])
 
 
 def _load_news(team_name: str) -> list[dict]:
@@ -100,7 +124,7 @@ def _clear_team() -> None:
 
 # ── Team card ─────────────────────────────────────────────────────────────────
 
-def _render_card(name: str, profile: dict, group: str) -> None:
+def _render_card(name: str, profile: dict, group: str, win_prob: float | None = None) -> None:
     top3 = profile["top3"]
     n_top3 = _top3_count(top3)
     rank = profile["fifa_rank"]
@@ -135,6 +159,13 @@ def _render_card(name: str, profile: dict, group: str) -> None:
                 st.markdown(f"<span style='font-size:12px;color:#888;'>"
                             f"{_top3_summary(top3)}</span>",
                             unsafe_allow_html=True)
+
+        if win_prob is not None:
+            st.markdown(
+                f"<div style='text-align:center;font-size:12px;color:#888;margin-bottom:4px;'>"
+                f"🏆 Win prob: <b>{win_prob * 100:.1f}%</b></div>",
+                unsafe_allow_html=True,
+            )
 
         # Detail button
         st.button(
@@ -181,7 +212,7 @@ def _render_detail(name: str) -> None:
     st.divider()
 
     # ── Squad ─────────────────────────────────────────────────────────────────
-    tab_squad, tab_news = st.tabs(["🧑‍💼 Squad", "📰 Today's News"])
+    tab_squad, tab_news, tab_outlook = st.tabs(["🧑‍💼 Squad", "📰 Today's News", "📊 Tournament Outlook"])
 
     with tab_squad:
         st.subheader("Squad")
@@ -258,6 +289,80 @@ def _render_detail(name: str) -> None:
                 "an `ANTHROPIC_API_KEY` to fetch live news summaries."
             )
 
+    # ── Tournament Outlook ────────────────────────────────────────────────────
+    with tab_outlook:
+        bracket = load_bracket_prediction()
+
+        # Championship win probability
+        win_prob = _get_win_prob(name, bracket)
+        elo = _get_team_elo(name)
+
+        o1, o2 = st.columns(2)
+        o1.metric(
+            "Championship Win Probability",
+            f"{win_prob * 100:.1f}%" if win_prob is not None else "—",
+            help="Based on Monte Carlo tournament simulation.",
+        )
+        o2.metric(
+            "Current Elo Rating",
+            f"{elo:.0f}" if elo is not None else "—",
+            help="K=40 competitive, K=20 friendly, +50×multiplier trophy bonus.",
+        )
+
+        # Top contenders bar chart for context
+        contenders = bracket.get("top_contenders", [])
+        if contenders:
+            st.markdown("**Top Championship Contenders**")
+            contenders_df = (
+                pd.DataFrame(contenders)
+                .assign(win_pct=lambda d: (d["win_probability"] * 100).round(1))
+                .sort_values("win_pct", ascending=False)
+            )
+            # Highlight this team in the chart by adding a marker
+            st.bar_chart(contenders_df.set_index("team")["win_pct"], use_container_width=True)
+            n_sims = bracket.get("n_simulations", 0)
+            if n_sims:
+                st.caption(f"Based on {n_sims:,} Monte Carlo simulations.")
+
+        st.markdown("---")
+
+        # Predicted group standings
+        standings = load_predicted_standings()
+        group_standings = standings.get(group, [])
+        if group_standings:
+            st.markdown(f"**Predicted Group {group} Standings**")
+            rows = []
+            for t in group_standings:
+                rows.append({
+                    "Pos": t.get("position", ""),
+                    "Team": t.get("team", ""),
+                    "Pts": t.get("pts", 0),
+                    "W": t.get("w", 0),
+                    "D": t.get("d", 0),
+                    "L": t.get("l", 0),
+                    "GF": t.get("gf", 0),
+                    "GA": t.get("ga", 0),
+                    "GD": t.get("gd", 0),
+                })
+            st.dataframe(
+                pd.DataFrame(rows),
+                hide_index=True,
+                use_container_width=True,
+                column_config={
+                    "Pos":  st.column_config.NumberColumn("Pos", width="small"),
+                    "Team": st.column_config.TextColumn("Team", width="large"),
+                    "Pts":  st.column_config.NumberColumn("Pts", width="small"),
+                    "W":    st.column_config.NumberColumn("W",   width="small"),
+                    "D":    st.column_config.NumberColumn("D",   width="small"),
+                    "L":    st.column_config.NumberColumn("L",   width="small"),
+                    "GF":   st.column_config.NumberColumn("GF",  width="small"),
+                    "GA":   st.column_config.NumberColumn("GA",  width="small"),
+                    "GD":   st.column_config.NumberColumn("GD",  width="small"),
+                },
+            )
+        else:
+            st.info("Predicted standings will appear after running `python scripts/simulate_bracket.py`.")
+
 
 # ── Main render ───────────────────────────────────────────────────────────────
 
@@ -311,6 +416,9 @@ def render() -> None:
 
     st.caption(f"{len(all_teams)} team{'s' if len(all_teams) != 1 else ''} found")
 
+    bracket = load_bracket_prediction()
+    win_probs = {c["team"]: c["win_probability"] for c in bracket.get("top_contenders", [])}
+
     # Render cards in a 4-column grid
     cols_per_row = 4
     for row_start in range(0, len(all_teams), cols_per_row):
@@ -319,4 +427,4 @@ def render() -> None:
         for col, (name, profile) in zip(cols, row_teams):
             group = TEAM_GROUP.get(name, "?")
             with col:
-                _render_card(name, profile, group)
+                _render_card(name, profile, group, win_probs.get(name))
