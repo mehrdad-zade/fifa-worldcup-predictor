@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """
 Daily Mode: given two team IDs and a stage, returns a full prediction dict
 including W/D/L probabilities and expected scoreline.

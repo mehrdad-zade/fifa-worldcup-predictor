@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """
 Seeds Elo ratings from historical WC results stored in the DB.
 Run once after initial data ingestion to prime the Elo system.
@@ -33,11 +35,8 @@ def _team_id_by_name(name: str) -> int | None:
 
 
 def main() -> None:
-    # Reset all Elo to default
-    execute_sql("DELETE FROM elo_history")
-    print("Cleared Elo history.")
-
-    # Seed from completed match results (chronological)
+    # Initial Elo seeds and trophy bonuses are handled by scripts/seed_fixtures.py.
+    # This script only adds incremental updates from completed WC 2026 match results.
     df = query_df("""
         SELECT f.fixture_id, f.home_team_id, f.away_team_id,
                f.match_date, f.stage, r.home_score, r.away_score
@@ -46,31 +45,24 @@ def main() -> None:
         ORDER BY f.match_date ASC
     """)
 
-    if not df.empty:
-        print(f"Backfilling Elo from {len(df)} historical matches...")
-        for _, row in df.iterrows():
-            is_friendly = str(row["stage"]).lower() in ("friendly", "international friendly")
-            update_elo_after_match(
-                int(row["home_team_id"]),
-                int(row["away_team_id"]),
-                int(row["home_score"]),
-                int(row["away_score"]),
-                str(row["match_date"])[:10],
-                is_friendly=is_friendly,
-                reason=f"{row['stage']}: {row['fixture_id']}",
-            )
+    if df.empty:
+        print("No completed match results yet — nothing to backfill.")
+        return
 
-    # Apply trophy bonuses
-    print("Applying trophy bonuses...")
-    for team_name, t_name, t_type, won_date, multiplier in _HISTORICAL_TROPHY_EVENTS:
-        tid = _team_id_by_name(team_name)
-        if tid:
-            new_elo = apply_trophy_bonus(tid, t_type, won_date, multiplier)
-            print(f"  {team_name}: {t_name} → new Elo {new_elo:.1f}")
-        else:
-            print(f"  WARNING: team '{team_name}' not found in DB — skipping trophy.")
+    print(f"Updating Elo from {len(df)} completed match(es)...")
+    for _, row in df.iterrows():
+        is_friendly = str(row["stage"]).lower() in ("friendly", "international friendly")
+        update_elo_after_match(
+            int(row["home_team_id"]),
+            int(row["away_team_id"]),
+            int(row["home_score"]),
+            int(row["away_score"]),
+            str(row["match_date"])[:10],
+            is_friendly=is_friendly,
+            reason=f"{row['stage']}: {row['fixture_id']}",
+        )
 
-    print("Elo backfill complete.")
+    print("Elo update complete.")
 
 
 if __name__ == "__main__":

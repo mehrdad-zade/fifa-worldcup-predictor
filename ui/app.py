@@ -12,12 +12,11 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-from ui.page_modules import match_center, bracket_view, analytics
+from ui.page_modules import match_center, participants
 
 _PAGES = {
-    "⚽ Match Center": match_center,
-    "🏆 Bracket View": bracket_view,
-    "📊 Analytics": analytics,
+    "🗓️ Fixtures":      match_center,
+    "🌍 Participants":  participants,
 }
 
 

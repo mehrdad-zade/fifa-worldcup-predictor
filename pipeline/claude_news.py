@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """
 Uses Claude API to extract injury/fitness intelligence for a team ahead of a match.
 Results are cached in SQLite for 6 hours to minimise API spend.

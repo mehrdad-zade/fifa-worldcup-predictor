@@ -15,7 +15,7 @@ echo "======================================="
 # ── 1. Virtual environment ──────────────────
 if [ ! -d "$VENV_DIR" ]; then
     echo "[1/8] Creating virtual environment..."
-    python -m venv "$VENV_DIR"
+    python3 -m venv "$VENV_DIR"
 else
     echo "[1/8] Virtual environment exists — skipping."
 fi
@@ -47,24 +47,33 @@ fi
 echo "[4/8] Initialising database schema..."
 python scripts/init_db.py
 
-echo "[5/8] Running data ingestion (skips if already fresh today)..."
+echo "[5/8] Seeding teams, fixtures, Elo ratings and Poisson model..."
+python scripts/seed_fixtures.py
+
+echo "  Running data ingestion (updates from API-Football if key is set)..."
 python -m pipeline.ingestion_runner --skip-if-fresh || true
 
-# ── 6. Elo backfill (seeds ratings) ─────────
-echo "[6/8] Backfilling Elo ratings from match history..."
+# ── 6. Elo backfill (incremental from match results only) ───
+echo "[6/8] Updating Elo from completed match results..."
 python scripts/backfill_elo.py || true
 
 # ── 7. Model training ────────────────────────
-# Use 5 Optuna trials on first run (fast); skip entirely if artifacts exist.
-if ls "$ARTIFACTS_DIR"/*.pkl 2>/dev/null | grep -q .; then
-    echo "[7/8] Model artifacts found — skipping training."
+# Use 5 Optuna trials on first run (fast); skip if XGBoost artifact already exists.
+if ls "$ARTIFACTS_DIR"/xgb_*.pkl 2>/dev/null | grep -q .; then
+    echo "[7/8] XGBoost/LightGBM artifacts found — skipping training."
 else
-    echo "[7/8] Training models (5 Optuna trials for quick startup)..."
+    echo "[7/8] Training XGBoost + LightGBM (5 Optuna trials)..."
     python scripts/train_models.py --optuna-trials 5 || true
 fi
 
 # ── 8. Predictions & evaluation ─────────────
-echo "[8/8] Generating predictions and bracket simulation..."
+echo "[8/8] Generating predictions for all 104 fixtures..."
+python scripts/predict_all_fixtures.py
+
+echo "  Simulating knockout bracket from predicted group standings..."
+python scripts/simulate_bracket.py
+
+echo "  Generating bracket simulation..."
 python scripts/generate_predictions.py --skip-if-fresh --no-news --n-sims 500 || true
 
 echo "  Running evaluation against completed matches..."

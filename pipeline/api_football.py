@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """
 REST client for API-Football v3.
 Implements daily JSON caching to stay within the 100 req/day free tier.

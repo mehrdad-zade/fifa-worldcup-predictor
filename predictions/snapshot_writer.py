@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """
 Writes predictions to:
   1. JSON snapshot file: data/snapshots/YYYY-MM-DD_v{VERSION}.json

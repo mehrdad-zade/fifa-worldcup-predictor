@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """
 Scrapes FBref national team squad pages to extract per-player statistics.
 
@@ -14,28 +16,32 @@ from datetime import date
 from pathlib import Path
 
 import pandas as pd
-import requests
 from bs4 import BeautifulSoup
 
 from config.settings import settings
 
+try:
+    from curl_cffi import requests as curl_requests
+    _SESSION = curl_requests.Session(impersonate="chrome")
+    _USE_CURL = True
+except ImportError:
+    import requests as _requests
+    _SESSION = _requests.Session()
+    _SESSION.headers.update({
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/125.0.0.0 Safari/537.36"
+        ),
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Referer": "https://fbref.com/",
+        "DNT": "1",
+    })
+    _USE_CURL = False
+
 _FBREF_BASE = "https://fbref.com"
-
-_HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/125.0.0.0 Safari/537.36"
-    ),
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "en-US,en;q=0.9",
-    "Accept-Encoding": "gzip, deflate, br",
-    "Referer": "https://fbref.com/",
-    "DNT": "1",
-}
-
-_SESSION = requests.Session()
-_SESSION.headers.update(_HEADERS)
 
 # After this many consecutive 403s, skip the rest of the squads for today.
 _MAX_CONSECUTIVE_BLOCKS = 2

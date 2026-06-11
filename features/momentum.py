@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """
 Momentum Score: weighted sum of recent trophy wins, decaying exponentially with time.
 

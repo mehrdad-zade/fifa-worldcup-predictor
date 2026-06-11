@@ -1,0 +1,2158 @@
+{
+  "meta": {
+    "simulation_date": "2026-06-11",
+    "model_version": "v1.0-boosted"
+  },
+  "daily_predictions": [],
+  "final_bracket_prediction": {
+    "champion": "Senegal",
+    "champion_id": 34,
+    "champion_probability": 0.092,
+    "runner_up": "Netherlands",
+    "runner_up_id": 33,
+    "top_contenders": [
+      {
+        "team": "Senegal",
+        "team_id": 34,
+        "win_probability": 0.092
+      },
+      {
+        "team": "Netherlands",
+        "team_id": 33,
+        "win_probability": 0.078
+      },
+      {
+        "team": "Belgium",
+        "team_id": 1,
+        "win_probability": 0.078
+      },
+      {
+        "team": "Mexico",
+        "team_id": 16,
+        "win_probability": 0.064
+      },
+      {
+        "team": "England",
+        "team_id": 26,
+        "win_probability": 0.064
+      },
+      {
+        "team": "South Korea",
+        "team_id": 20,
+        "win_probability": 0.064
+      },
+      {
+        "team": "Ghana",
+        "team_id": 58,
+        "win_probability": 0.062
+      },
+      {
+        "team": "Chile",
+        "team_id": 11,
+        "win_probability": 0.06
+      }
+    ],
+    "group_stage_matches": {
+      "A": [
+        {
+          "group": "A",
+          "home": "Argentina",
+          "home_id": 6,
+          "away": "South Korea",
+          "away_id": 20,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "A",
+          "home": "Argentina",
+          "home_id": 6,
+          "away": "Morocco",
+          "away_id": 32,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "A",
+          "home": "South Korea",
+          "home_id": 20,
+          "away": "Morocco",
+          "away_id": 32,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        }
+      ],
+      "B": [
+        {
+          "group": "B",
+          "home": "Mexico",
+          "home_id": 16,
+          "away": "Senegal",
+          "away_id": 34,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        }
+      ],
+      "C": [
+        {
+          "group": "C",
+          "home": "Colombia",
+          "home_id": 12,
+          "away": "Iran",
+          "away_id": 29,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "C",
+          "home": "Colombia",
+          "home_id": 12,
+          "away": "Canada",
+          "away_id": 94,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "C",
+          "home": "Colombia",
+          "home_id": 12,
+          "away": "Ivory Coast",
+          "away_id": 118,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "C",
+          "home": "Iran",
+          "home_id": 29,
+          "away": "Canada",
+          "away_id": 94,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "C",
+          "home": "Iran",
+          "home_id": 29,
+          "away": "Ivory Coast",
+          "away_id": 118,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "C",
+          "home": "Canada",
+          "home_id": 94,
+          "away": "Ivory Coast",
+          "away_id": 118,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        }
+      ],
+      "D": [],
+      "E": [
+        {
+          "group": "E",
+          "home": "Spain",
+          "home_id": 9,
+          "away": "Uruguay",
+          "away_id": 7,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "E",
+          "home": "Spain",
+          "home_id": 9,
+          "away": "Saudi Arabia",
+          "away_id": 46,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "E",
+          "home": "Spain",
+          "home_id": 9,
+          "away": "Cameroon",
+          "away_id": 108,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "E",
+          "home": "Uruguay",
+          "home_id": 7,
+          "away": "Saudi Arabia",
+          "away_id": 46,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "E",
+          "home": "Uruguay",
+          "home_id": 7,
+          "away": "Cameroon",
+          "away_id": 108,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "E",
+          "home": "Saudi Arabia",
+          "home_id": 46,
+          "away": "Cameroon",
+          "away_id": 108,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        }
+      ],
+      "F": [
+        {
+          "group": "F",
+          "home": "Germany",
+          "home_id": 4,
+          "away": "Venezuela",
+          "away_id": 22,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "F",
+          "home": "Germany",
+          "home_id": 4,
+          "away": "Iraq",
+          "away_id": 40,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "F",
+          "home": "Venezuela",
+          "home_id": 22,
+          "away": "Iraq",
+          "away_id": 40,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        }
+      ],
+      "G": [
+        {
+          "group": "G",
+          "home": "England",
+          "home_id": 26,
+          "away": "Ghana",
+          "away_id": 58,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "G",
+          "home": "England",
+          "home_id": 26,
+          "away": "Jamaica",
+          "away_id": 96,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "G",
+          "home": "England",
+          "home_id": 26,
+          "away": "Jordan",
+          "away_id": 161,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "G",
+          "home": "Ghana",
+          "home_id": 58,
+          "away": "Jamaica",
+          "away_id": 96,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "G",
+          "home": "Ghana",
+          "home_id": 58,
+          "away": "Jordan",
+          "away_id": 161,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "G",
+          "home": "Jamaica",
+          "home_id": 96,
+          "away": "Jordan",
+          "away_id": 161,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        }
+      ],
+      "H": [
+        {
+          "group": "H",
+          "home": "Uzbekistan",
+          "home_id": 31,
+          "away": "Portugal",
+          "away_id": 38,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "H",
+          "home": "Uzbekistan",
+          "home_id": 31,
+          "away": "South Africa",
+          "away_id": 78,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "H",
+          "home": "Uzbekistan",
+          "home_id": 31,
+          "away": "Honduras",
+          "away_id": 95,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "H",
+          "home": "Portugal",
+          "home_id": 38,
+          "away": "South Africa",
+          "away_id": 78,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "H",
+          "home": "Portugal",
+          "home_id": 38,
+          "away": "Honduras",
+          "away_id": 95,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "H",
+          "home": "South Africa",
+          "home_id": 78,
+          "away": "Honduras",
+          "away_id": 95,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        }
+      ],
+      "I": [
+        {
+          "group": "I",
+          "home": "Netherlands",
+          "home_id": 33,
+          "away": "DR Congo",
+          "away_id": 36,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "I",
+          "home": "Netherlands",
+          "home_id": 33,
+          "away": "Panama",
+          "away_id": 75,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "I",
+          "home": "Netherlands",
+          "home_id": 33,
+          "away": "New Zealand",
+          "away_id": 210,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "I",
+          "home": "DR Congo",
+          "home_id": 36,
+          "away": "Panama",
+          "away_id": 75,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "I",
+          "home": "DR Congo",
+          "home_id": 36,
+          "away": "New Zealand",
+          "away_id": 210,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "I",
+          "home": "Panama",
+          "home_id": 75,
+          "away": "New Zealand",
+          "away_id": 210,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        }
+      ],
+      "J": [
+        {
+          "group": "J",
+          "home": "Belgium",
+          "home_id": 1,
+          "away": "Chile",
+          "away_id": 11,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "J",
+          "home": "Belgium",
+          "home_id": 1,
+          "away": "Serbia",
+          "away_id": 14,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "J",
+          "home": "Belgium",
+          "home_id": 1,
+          "away": "Scotland",
+          "away_id": 25,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "J",
+          "home": "Chile",
+          "home_id": 11,
+          "away": "Serbia",
+          "away_id": 14,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "J",
+          "home": "Chile",
+          "home_id": 11,
+          "away": "Scotland",
+          "away_id": 25,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "J",
+          "home": "Serbia",
+          "home_id": 14,
+          "away": "Scotland",
+          "away_id": 25,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        }
+      ],
+      "K": [
+        {
+          "group": "K",
+          "home": "Italy",
+          "home_id": 10,
+          "away": "Croatia",
+          "away_id": 3,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "K",
+          "home": "Italy",
+          "home_id": 10,
+          "away": "Turkey",
+          "away_id": 28,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "K",
+          "home": "Italy",
+          "home_id": 10,
+          "away": "Indonesia",
+          "away_id": 43,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "K",
+          "home": "Croatia",
+          "home_id": 3,
+          "away": "Turkey",
+          "away_id": 28,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "K",
+          "home": "Croatia",
+          "home_id": 3,
+          "away": "Indonesia",
+          "away_id": 43,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "K",
+          "home": "Turkey",
+          "home_id": 28,
+          "away": "Indonesia",
+          "away_id": 43,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        }
+      ],
+      "L": [
+        {
+          "group": "L",
+          "home": "Switzerland",
+          "home_id": 15,
+          "away": "Denmark",
+          "away_id": 21,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "L",
+          "home": "Switzerland",
+          "home_id": 15,
+          "away": "Poland",
+          "away_id": 24,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "L",
+          "home": "Switzerland",
+          "home_id": 15,
+          "away": "Austria",
+          "away_id": 44,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "L",
+          "home": "Denmark",
+          "home_id": 21,
+          "away": "Poland",
+          "away_id": 24,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "L",
+          "home": "Denmark",
+          "home_id": 21,
+          "away": "Austria",
+          "away_id": 44,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        },
+        {
+          "group": "L",
+          "home": "Poland",
+          "home_id": 24,
+          "away": "Austria",
+          "away_id": 44,
+          "home_score": 1,
+          "away_score": 1,
+          "predicted_winner": "Draw",
+          "actual_home_score": null,
+          "actual_away_score": null
+        }
+      ]
+    },
+    "predicted_standings": {
+      "A": [
+        {
+          "team": "Argentina",
+          "team_id": 6,
+          "w": 0,
+          "d": 2,
+          "l": 0,
+          "gf": 2,
+          "ga": 2,
+          "pts": 2,
+          "gd": 0,
+          "position": 1
+        },
+        {
+          "team": "South Korea",
+          "team_id": 20,
+          "w": 0,
+          "d": 2,
+          "l": 0,
+          "gf": 2,
+          "ga": 2,
+          "pts": 2,
+          "gd": 0,
+          "position": 2
+        },
+        {
+          "team": "Morocco",
+          "team_id": 32,
+          "w": 0,
+          "d": 2,
+          "l": 0,
+          "gf": 2,
+          "ga": 2,
+          "pts": 2,
+          "gd": 0,
+          "position": 3
+        }
+      ],
+      "B": [
+        {
+          "team": "Mexico",
+          "team_id": 16,
+          "w": 0,
+          "d": 1,
+          "l": 0,
+          "gf": 1,
+          "ga": 1,
+          "pts": 1,
+          "gd": 0,
+          "position": 1
+        },
+        {
+          "team": "Senegal",
+          "team_id": 34,
+          "w": 0,
+          "d": 1,
+          "l": 0,
+          "gf": 1,
+          "ga": 1,
+          "pts": 1,
+          "gd": 0,
+          "position": 2
+        }
+      ],
+      "C": [
+        {
+          "team": "Colombia",
+          "team_id": 12,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 1
+        },
+        {
+          "team": "Iran",
+          "team_id": 29,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 2
+        },
+        {
+          "team": "Canada",
+          "team_id": 94,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 3
+        },
+        {
+          "team": "Ivory Coast",
+          "team_id": 118,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 4
+        }
+      ],
+      "D": [
+        {
+          "team": "France",
+          "team_id": 2,
+          "w": 0,
+          "d": 0,
+          "l": 0,
+          "gf": 0,
+          "ga": 0,
+          "pts": 0,
+          "gd": 0,
+          "position": 1
+        }
+      ],
+      "E": [
+        {
+          "team": "Spain",
+          "team_id": 9,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 1
+        },
+        {
+          "team": "Uruguay",
+          "team_id": 7,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 2
+        },
+        {
+          "team": "Saudi Arabia",
+          "team_id": 46,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 3
+        },
+        {
+          "team": "Cameroon",
+          "team_id": 108,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 4
+        }
+      ],
+      "F": [
+        {
+          "team": "Germany",
+          "team_id": 4,
+          "w": 0,
+          "d": 2,
+          "l": 0,
+          "gf": 2,
+          "ga": 2,
+          "pts": 2,
+          "gd": 0,
+          "position": 1
+        },
+        {
+          "team": "Venezuela",
+          "team_id": 22,
+          "w": 0,
+          "d": 2,
+          "l": 0,
+          "gf": 2,
+          "ga": 2,
+          "pts": 2,
+          "gd": 0,
+          "position": 2
+        },
+        {
+          "team": "Iraq",
+          "team_id": 40,
+          "w": 0,
+          "d": 2,
+          "l": 0,
+          "gf": 2,
+          "ga": 2,
+          "pts": 2,
+          "gd": 0,
+          "position": 3
+        }
+      ],
+      "G": [
+        {
+          "team": "England",
+          "team_id": 26,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 1
+        },
+        {
+          "team": "Ghana",
+          "team_id": 58,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 2
+        },
+        {
+          "team": "Jamaica",
+          "team_id": 96,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 3
+        },
+        {
+          "team": "Jordan",
+          "team_id": 161,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 4
+        }
+      ],
+      "H": [
+        {
+          "team": "Uzbekistan",
+          "team_id": 31,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 1
+        },
+        {
+          "team": "Portugal",
+          "team_id": 38,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 2
+        },
+        {
+          "team": "South Africa",
+          "team_id": 78,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 3
+        },
+        {
+          "team": "Honduras",
+          "team_id": 95,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 4
+        }
+      ],
+      "I": [
+        {
+          "team": "Netherlands",
+          "team_id": 33,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 1
+        },
+        {
+          "team": "DR Congo",
+          "team_id": 36,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 2
+        },
+        {
+          "team": "Panama",
+          "team_id": 75,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 3
+        },
+        {
+          "team": "New Zealand",
+          "team_id": 210,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 4
+        }
+      ],
+      "J": [
+        {
+          "team": "Belgium",
+          "team_id": 1,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 1
+        },
+        {
+          "team": "Chile",
+          "team_id": 11,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 2
+        },
+        {
+          "team": "Serbia",
+          "team_id": 14,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 3
+        },
+        {
+          "team": "Scotland",
+          "team_id": 25,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 4
+        }
+      ],
+      "K": [
+        {
+          "team": "Italy",
+          "team_id": 10,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 1
+        },
+        {
+          "team": "Croatia",
+          "team_id": 3,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 2
+        },
+        {
+          "team": "Turkey",
+          "team_id": 28,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 3
+        },
+        {
+          "team": "Indonesia",
+          "team_id": 43,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 4
+        }
+      ],
+      "L": [
+        {
+          "team": "Switzerland",
+          "team_id": 15,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 1
+        },
+        {
+          "team": "Denmark",
+          "team_id": 21,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 2
+        },
+        {
+          "team": "Poland",
+          "team_id": 24,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 3
+        },
+        {
+          "team": "Austria",
+          "team_id": 44,
+          "w": 0,
+          "d": 3,
+          "l": 0,
+          "gf": 3,
+          "ga": 3,
+          "pts": 3,
+          "gd": 0,
+          "position": 4
+        }
+      ]
+    },
+    "group_qualifiers": {
+      "A": [
+        {
+          "team": "Argentina",
+          "team_id": 6,
+          "position": 1,
+          "advance_prob": 1.0
+        },
+        {
+          "team": "South Korea",
+          "team_id": 20,
+          "position": 2,
+          "advance_prob": 1.0
+        }
+      ],
+      "B": [
+        {
+          "team": "Mexico",
+          "team_id": 16,
+          "position": 1,
+          "advance_prob": 1.0
+        },
+        {
+          "team": "Senegal",
+          "team_id": 34,
+          "position": 2,
+          "advance_prob": 1.0
+        }
+      ],
+      "C": [
+        {
+          "team": "Colombia",
+          "team_id": 12,
+          "position": 1,
+          "advance_prob": 1.0
+        },
+        {
+          "team": "Iran",
+          "team_id": 29,
+          "position": 2,
+          "advance_prob": 1.0
+        }
+      ],
+      "D": [
+        {
+          "team": "France",
+          "team_id": 2,
+          "position": 1,
+          "advance_prob": 1.0
+        }
+      ],
+      "E": [
+        {
+          "team": "Spain",
+          "team_id": 9,
+          "position": 1,
+          "advance_prob": 1.0
+        },
+        {
+          "team": "Uruguay",
+          "team_id": 7,
+          "position": 2,
+          "advance_prob": 1.0
+        }
+      ],
+      "F": [
+        {
+          "team": "Germany",
+          "team_id": 4,
+          "position": 1,
+          "advance_prob": 1.0
+        },
+        {
+          "team": "Venezuela",
+          "team_id": 22,
+          "position": 2,
+          "advance_prob": 1.0
+        }
+      ],
+      "G": [
+        {
+          "team": "England",
+          "team_id": 26,
+          "position": 1,
+          "advance_prob": 1.0
+        },
+        {
+          "team": "Ghana",
+          "team_id": 58,
+          "position": 2,
+          "advance_prob": 1.0
+        }
+      ],
+      "H": [
+        {
+          "team": "Uzbekistan",
+          "team_id": 31,
+          "position": 1,
+          "advance_prob": 1.0
+        },
+        {
+          "team": "Portugal",
+          "team_id": 38,
+          "position": 2,
+          "advance_prob": 1.0
+        }
+      ],
+      "I": [
+        {
+          "team": "Netherlands",
+          "team_id": 33,
+          "position": 1,
+          "advance_prob": 1.0
+        },
+        {
+          "team": "DR Congo",
+          "team_id": 36,
+          "position": 2,
+          "advance_prob": 1.0
+        }
+      ],
+      "J": [
+        {
+          "team": "Belgium",
+          "team_id": 1,
+          "position": 1,
+          "advance_prob": 1.0
+        },
+        {
+          "team": "Chile",
+          "team_id": 11,
+          "position": 2,
+          "advance_prob": 1.0
+        }
+      ],
+      "K": [
+        {
+          "team": "Italy",
+          "team_id": 10,
+          "position": 1,
+          "advance_prob": 1.0
+        },
+        {
+          "team": "Croatia",
+          "team_id": 3,
+          "position": 2,
+          "advance_prob": 1.0
+        }
+      ],
+      "L": [
+        {
+          "team": "Switzerland",
+          "team_id": 15,
+          "position": 1,
+          "advance_prob": 1.0
+        },
+        {
+          "team": "Denmark",
+          "team_id": 21,
+          "position": 2,
+          "advance_prob": 1.0
+        }
+      ]
+    },
+    "bracket_rounds": {
+      "R32": [
+        {
+          "match_num": 1,
+          "match_code": "R32_1",
+          "stage": "R32",
+          "home": "Argentina",
+          "home_id": 6,
+          "away": "Senegal",
+          "away_id": 34,
+          "predicted_winner": "Senegal",
+          "predicted_winner_id": 34,
+          "predicted_score": {
+            "home": 0,
+            "away": 1
+          },
+          "actual_winner": null
+        },
+        {
+          "match_num": 2,
+          "match_code": "R32_2",
+          "stage": "R32",
+          "home": "Mexico",
+          "home_id": 16,
+          "away": "South Korea",
+          "away_id": 20,
+          "predicted_winner": "Mexico",
+          "predicted_winner_id": 16,
+          "predicted_score": {
+            "home": 1,
+            "away": 0
+          },
+          "actual_winner": null
+        },
+        {
+          "match_num": 3,
+          "match_code": "R32_3",
+          "stage": "R32",
+          "home": "France",
+          "home_id": 2,
+          "away": "Iran",
+          "away_id": 29,
+          "predicted_winner": "France",
+          "predicted_winner_id": 2,
+          "predicted_score": {
+            "home": 1,
+            "away": 0
+          },
+          "actual_winner": null
+        },
+        {
+          "match_num": 4,
+          "match_code": "R32_4",
+          "stage": "R32",
+          "home": "Spain",
+          "home_id": 9,
+          "away": "Venezuela",
+          "away_id": 22,
+          "predicted_winner": "Spain",
+          "predicted_winner_id": 9,
+          "predicted_score": {
+            "home": 1,
+            "away": 0
+          },
+          "actual_winner": null
+        },
+        {
+          "match_num": 5,
+          "match_code": "R32_5",
+          "stage": "R32",
+          "home": "Germany",
+          "home_id": 4,
+          "away": "Uruguay",
+          "away_id": 7,
+          "predicted_winner": "Uruguay",
+          "predicted_winner_id": 7,
+          "predicted_score": {
+            "home": 0,
+            "away": 1
+          },
+          "actual_winner": null
+        },
+        {
+          "match_num": 6,
+          "match_code": "R32_6",
+          "stage": "R32",
+          "home": "England",
+          "home_id": 26,
+          "away": "Portugal",
+          "away_id": 38,
+          "predicted_winner": "England",
+          "predicted_winner_id": 26,
+          "predicted_score": {
+            "home": 1,
+            "away": 0
+          },
+          "actual_winner": null
+        },
+        {
+          "match_num": 7,
+          "match_code": "R32_7",
+          "stage": "R32",
+          "home": "Uzbekistan",
+          "home_id": 31,
+          "away": "Ghana",
+          "away_id": 58,
+          "predicted_winner": "Ghana",
+          "predicted_winner_id": 58,
+          "predicted_score": {
+            "home": 0,
+            "away": 1
+          },
+          "actual_winner": null
+        },
+        {
+          "match_num": 8,
+          "match_code": "R32_8",
+          "stage": "R32",
+          "home": "Netherlands",
+          "home_id": 33,
+          "away": "Chile",
+          "away_id": 11,
+          "predicted_winner": "Netherlands",
+          "predicted_winner_id": 33,
+          "predicted_score": {
+            "home": 1,
+            "away": 0
+          },
+          "actual_winner": null
+        },
+        {
+          "match_num": 9,
+          "match_code": "R32_9",
+          "stage": "R32",
+          "home": "Belgium",
+          "home_id": 1,
+          "away": "DR Congo",
+          "away_id": 36,
+          "predicted_winner": "Belgium",
+          "predicted_winner_id": 1,
+          "predicted_score": {
+            "home": 1,
+            "away": 0
+          },
+          "actual_winner": null
+        },
+        {
+          "match_num": 10,
+          "match_code": "R32_10",
+          "stage": "R32",
+          "home": "Italy",
+          "home_id": 10,
+          "away": "Denmark",
+          "away_id": 21,
+          "predicted_winner": "Italy",
+          "predicted_winner_id": 10,
+          "predicted_score": {
+            "home": 1,
+            "away": 0
+          },
+          "actual_winner": null
+        },
+        {
+          "match_num": 11,
+          "match_code": "R32_11",
+          "stage": "R32",
+          "home": "Switzerland",
+          "home_id": 15,
+          "away": "Croatia",
+          "away_id": 3,
+          "predicted_winner": "Switzerland",
+          "predicted_winner_id": 15,
+          "predicted_score": {
+            "home": 1,
+            "away": 0
+          },
+          "actual_winner": null
+        },
+        {
+          "match_num": 12,
+          "match_code": "R32_12",
+          "stage": "R32",
+          "home": "Canada",
+          "home_id": 94,
+          "away": "Saudi Arabia",
+          "away_id": 46,
+          "predicted_winner": "Canada",
+          "predicted_winner_id": 94,
+          "predicted_score": {
+            "home": 1,
+            "away": 0
+          },
+          "actual_winner": null
+        },
+        {
+          "match_num": 13,
+          "match_code": "R32_13",
+          "stage": "R32",
+          "home": "Jamaica",
+          "home_id": 96,
+          "away": "South Africa",
+          "away_id": 78,
+          "predicted_winner": "Jamaica",
+          "predicted_winner_id": 96,
+          "predicted_score": {
+            "home": 1,
+            "away": 0
+          },
+          "actual_winner": null
+        },
+        {
+          "match_num": 14,
+          "match_code": "R32_14",
+          "stage": "R32",
+          "home": "Panama",
+          "home_id": 75,
+          "away": "Serbia",
+          "away_id": 14,
+          "predicted_winner": "Panama",
+          "predicted_winner_id": 75,
+          "predicted_score": {
+            "home": 1,
+            "away": 0
+          },
+          "actual_winner": null
+        },
+        {
+          "match_num": 15,
+          "match_code": "R32_15",
+          "stage": "R32",
+          "home": "Turkey",
+          "home_id": 28,
+          "away": "Poland",
+          "away_id": 24,
+          "predicted_winner": "Turkey",
+          "predicted_winner_id": 28,
+          "predicted_score": {
+            "home": 1,
+            "away": 0
+          },
+          "actual_winner": null
+        }
+      ],
+      "R16": [
+        {
+          "match_num": 1,
+          "match_code": "R16_1",
+          "stage": "R16",
+          "home": "Mexico",
+          "home_id": 16,
+          "away": "France",
+          "away_id": 2,
+          "predicted_winner": "Mexico",
+          "predicted_winner_id": 16,
+          "predicted_score": {
+            "home": 2,
+            "away": 0
+          },
+          "actual_winner": null
+        },
+        {
+          "match_num": 2,
+          "match_code": "R16_2",
+          "stage": "R16",
+          "home": "Spain",
+          "home_id": 9,
+          "away": "Uruguay",
+          "away_id": 7,
+          "predicted_winner": "Spain",
+          "predicted_winner_id": 9,
+          "predicted_score": {
+            "home": 1,
+            "away": 0
+          },
+          "actual_winner": null
+        },
+        {
+          "match_num": 3,
+          "match_code": "R16_3",
+          "stage": "R16",
+          "home": "England",
+          "home_id": 26,
+          "away": "Ghana",
+          "away_id": 58,
+          "predicted_winner": "England",
+          "predicted_winner_id": 26,
+          "predicted_score": {
+            "home": 1,
+            "away": 0
+          },
+          "actual_winner": null
+        },
+        {
+          "match_num": 4,
+          "match_code": "R16_4",
+          "stage": "R16",
+          "home": "Netherlands",
+          "home_id": 33,
+          "away": "Belgium",
+          "away_id": 1,
+          "predicted_winner": "Netherlands",
+          "predicted_winner_id": 33,
+          "predicted_score": {
+            "home": 1,
+            "away": 0
+          },
+          "actual_winner": null
+        },
+        {
+          "match_num": 5,
+          "match_code": "R16_5",
+          "stage": "R16",
+          "home": "Italy",
+          "home_id": 10,
+          "away": "Switzerland",
+          "away_id": 15,
+          "predicted_winner": "Italy",
+          "predicted_winner_id": 10,
+          "predicted_score": {
+            "home": 1,
+            "away": 0
+          },
+          "actual_winner": null
+        },
+        {
+          "match_num": 6,
+          "match_code": "R16_6",
+          "stage": "R16",
+          "home": "Canada",
+          "home_id": 94,
+          "away": "Jamaica",
+          "away_id": 96,
+          "predicted_winner": "Canada",
+          "predicted_winner_id": 94,
+          "predicted_score": {
+            "home": 1,
+            "away": 0
+          },
+          "actual_winner": null
+        },
+        {
+          "match_num": 7,
+          "match_code": "R16_7",
+          "stage": "R16",
+          "home": "Panama",
+          "home_id": 75,
+          "away": "Turkey",
+          "away_id": 28,
+          "predicted_winner": "Panama",
+          "predicted_winner_id": 75,
+          "predicted_score": {
+            "home": 1,
+            "away": 0
+          },
+          "actual_winner": null
+        },
+        {
+          "match_num": 8,
+          "match_code": "R16_BYE",
+          "stage": "R16",
+          "home": "Senegal",
+          "home_id": 34,
+          "away": "—",
+          "away_id": -1,
+          "predicted_winner": "Senegal",
+          "predicted_winner_id": 34,
+          "predicted_score": {
+            "home": 0,
+            "away": 0
+          },
+          "actual_winner": null
+        }
+      ],
+      "QF": [
+        {
+          "match_num": 1,
+          "match_code": "QF_1",
+          "stage": "QF",
+          "home": "Mexico",
+          "home_id": 16,
+          "away": "Spain",
+          "away_id": 9,
+          "predicted_winner": "Mexico",
+          "predicted_winner_id": 16,
+          "predicted_score": {
+            "home": 1,
+            "away": 0
+          },
+          "actual_winner": null
+        },
+        {
+          "match_num": 2,
+          "match_code": "QF_2",
+          "stage": "QF",
+          "home": "England",
+          "home_id": 26,
+          "away": "Netherlands",
+          "away_id": 33,
+          "predicted_winner": "Netherlands",
+          "predicted_winner_id": 33,
+          "predicted_score": {
+            "home": 0,
+            "away": 1
+          },
+          "actual_winner": null
+        },
+        {
+          "match_num": 3,
+          "match_code": "QF_3",
+          "stage": "QF",
+          "home": "Italy",
+          "home_id": 10,
+          "away": "Canada",
+          "away_id": 94,
+          "predicted_winner": "Italy",
+          "predicted_winner_id": 10,
+          "predicted_score": {
+            "home": 1,
+            "away": 0
+          },
+          "actual_winner": null
+        },
+        {
+          "match_num": 4,
+          "match_code": "QF_4",
+          "stage": "QF",
+          "home": "Panama",
+          "home_id": 75,
+          "away": "Senegal",
+          "away_id": 34,
+          "predicted_winner": "Senegal",
+          "predicted_winner_id": 34,
+          "predicted_score": {
+            "home": 0,
+            "away": 2
+          },
+          "actual_winner": null
+        }
+      ],
+      "SF": [
+        {
+          "match_num": 1,
+          "match_code": "SF_1",
+          "stage": "SF",
+          "home": "Mexico",
+          "home_id": 16,
+          "away": "Netherlands",
+          "away_id": 33,
+          "predicted_winner": "Netherlands",
+          "predicted_winner_id": 33,
+          "predicted_score": {
+            "home": 0,
+            "away": 1
+          },
+          "actual_winner": null
+        },
+        {
+          "match_num": 2,
+          "match_code": "SF_2",
+          "stage": "SF",
+          "home": "Italy",
+          "home_id": 10,
+          "away": "Senegal",
+          "away_id": 34,
+          "predicted_winner": "Senegal",
+          "predicted_winner_id": 34,
+          "predicted_score": {
+            "home": 0,
+            "away": 2
+          },
+          "actual_winner": null
+        }
+      ],
+      "Final": [
+        {
+          "match_num": 1,
+          "match_code": "Final_1",
+          "stage": "Final",
+          "home": "Netherlands",
+          "home_id": 33,
+          "away": "Senegal",
+          "away_id": 34,
+          "predicted_winner": "Senegal",
+          "predicted_winner_id": 34,
+          "predicted_score": {
+            "home": 0,
+            "away": 1
+          },
+          "actual_winner": null
+        }
+      ]
+    },
+    "tbd_knockouts": [
+      {
+        "match_num": 1,
+        "match_code": "R32_1",
+        "stage": "R32",
+        "home": "Argentina",
+        "home_id": 6,
+        "away": "Senegal",
+        "away_id": 34,
+        "predicted_winner": "Senegal",
+        "predicted_winner_id": 34,
+        "predicted_score": {
+          "home": 0,
+          "away": 1
+        },
+        "actual_winner": null
+      },
+      {
+        "match_num": 2,
+        "match_code": "R32_2",
+        "stage": "R32",
+        "home": "Mexico",
+        "home_id": 16,
+        "away": "South Korea",
+        "away_id": 20,
+        "predicted_winner": "Mexico",
+        "predicted_winner_id": 16,
+        "predicted_score": {
+          "home": 1,
+          "away": 0
+        },
+        "actual_winner": null
+      },
+      {
+        "match_num": 3,
+        "match_code": "R32_3",
+        "stage": "R32",
+        "home": "France",
+        "home_id": 2,
+        "away": "Iran",
+        "away_id": 29,
+        "predicted_winner": "France",
+        "predicted_winner_id": 2,
+        "predicted_score": {
+          "home": 1,
+          "away": 0
+        },
+        "actual_winner": null
+      },
+      {
+        "match_num": 4,
+        "match_code": "R32_4",
+        "stage": "R32",
+        "home": "Spain",
+        "home_id": 9,
+        "away": "Venezuela",
+        "away_id": 22,
+        "predicted_winner": "Spain",
+        "predicted_winner_id": 9,
+        "predicted_score": {
+          "home": 1,
+          "away": 0
+        },
+        "actual_winner": null
+      },
+      {
+        "match_num": 5,
+        "match_code": "R32_5",
+        "stage": "R32",
+        "home": "Germany",
+        "home_id": 4,
+        "away": "Uruguay",
+        "away_id": 7,
+        "predicted_winner": "Uruguay",
+        "predicted_winner_id": 7,
+        "predicted_score": {
+          "home": 0,
+          "away": 1
+        },
+        "actual_winner": null
+      },
+      {
+        "match_num": 6,
+        "match_code": "R32_6",
+        "stage": "R32",
+        "home": "England",
+        "home_id": 26,
+        "away": "Portugal",
+        "away_id": 38,
+        "predicted_winner": "England",
+        "predicted_winner_id": 26,
+        "predicted_score": {
+          "home": 1,
+          "away": 0
+        },
+        "actual_winner": null
+      },
+      {
+        "match_num": 7,
+        "match_code": "R32_7",
+        "stage": "R32",
+        "home": "Uzbekistan",
+        "home_id": 31,
+        "away": "Ghana",
+        "away_id": 58,
+        "predicted_winner": "Ghana",
+        "predicted_winner_id": 58,
+        "predicted_score": {
+          "home": 0,
+          "away": 1
+        },
+        "actual_winner": null
+      },
+      {
+        "match_num": 8,
+        "match_code": "R32_8",
+        "stage": "R32",
+        "home": "Netherlands",
+        "home_id": 33,
+        "away": "Chile",
+        "away_id": 11,
+        "predicted_winner": "Netherlands",
+        "predicted_winner_id": 33,
+        "predicted_score": {
+          "home": 1,
+          "away": 0
+        },
+        "actual_winner": null
+      },
+      {
+        "match_num": 9,
+        "match_code": "R32_9",
+        "stage": "R32",
+        "home": "Belgium",
+        "home_id": 1,
+        "away": "DR Congo",
+        "away_id": 36,
+        "predicted_winner": "Belgium",
+        "predicted_winner_id": 1,
+        "predicted_score": {
+          "home": 1,
+          "away": 0
+        },
+        "actual_winner": null
+      },
+      {
+        "match_num": 10,
+        "match_code": "R32_10",
+        "stage": "R32",
+        "home": "Italy",
+        "home_id": 10,
+        "away": "Denmark",
+        "away_id": 21,
+        "predicted_winner": "Italy",
+        "predicted_winner_id": 10,
+        "predicted_score": {
+          "home": 1,
+          "away": 0
+        },
+        "actual_winner": null
+      },
+      {
+        "match_num": 11,
+        "match_code": "R32_11",
+        "stage": "R32",
+        "home": "Switzerland",
+        "home_id": 15,
+        "away": "Croatia",
+        "away_id": 3,
+        "predicted_winner": "Switzerland",
+        "predicted_winner_id": 15,
+        "predicted_score": {
+          "home": 1,
+          "away": 0
+        },
+        "actual_winner": null
+      },
+      {
+        "match_num": 12,
+        "match_code": "R32_12",
+        "stage": "R32",
+        "home": "Canada",
+        "home_id": 94,
+        "away": "Saudi Arabia",
+        "away_id": 46,
+        "predicted_winner": "Canada",
+        "predicted_winner_id": 94,
+        "predicted_score": {
+          "home": 1,
+          "away": 0
+        },
+        "actual_winner": null
+      },
+      {
+        "match_num": 13,
+        "match_code": "R32_13",
+        "stage": "R32",
+        "home": "Jamaica",
+        "home_id": 96,
+        "away": "South Africa",
+        "away_id": 78,
+        "predicted_winner": "Jamaica",
+        "predicted_winner_id": 96,
+        "predicted_score": {
+          "home": 1,
+          "away": 0
+        },
+        "actual_winner": null
+      },
+      {
+        "match_num": 14,
+        "match_code": "R32_14",
+        "stage": "R32",
+        "home": "Panama",
+        "home_id": 75,
+        "away": "Serbia",
+        "away_id": 14,
+        "predicted_winner": "Panama",
+        "predicted_winner_id": 75,
+        "predicted_score": {
+          "home": 1,
+          "away": 0
+        },
+        "actual_winner": null
+      },
+      {
+        "match_num": 15,
+        "match_code": "R32_15",
+        "stage": "R32",
+        "home": "Turkey",
+        "home_id": 28,
+        "away": "Poland",
+        "away_id": 24,
+        "predicted_winner": "Turkey",
+        "predicted_winner_id": 28,
+        "predicted_score": {
+          "home": 1,
+          "away": 0
+        },
+        "actual_winner": null
+      }
+    ],
+    "n_simulations": 500
+  }
+}

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """
 Computes the Group Status Vector for each team from current fixtures/results.
 Returns: points, goal_differential, goals_for, goals_against, games_played,

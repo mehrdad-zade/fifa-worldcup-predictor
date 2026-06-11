@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """
 Queries API-Football /teams endpoint to verify or populate api_football_id values
 in config/teams.json. Prints a diff table and optionally writes the updated JSON.

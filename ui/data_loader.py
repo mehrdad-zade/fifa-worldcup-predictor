@@ -134,6 +134,58 @@ def load_all_teams() -> pd.DataFrame:
     )
 
 
+@st.cache_data(ttl=300)
+def load_all_results() -> dict[str, str]:
+    """Return {fixture_id: 'H-A'} for every completed match in the DB."""
+    df = query_df("SELECT fixture_id, home_score, away_score FROM results")
+    if df.empty:
+        return {}
+    return {
+        row["fixture_id"]: f"{int(row['home_score'])}-{int(row['away_score'])}"
+        for _, row in df.iterrows()
+    }
+
+
+@st.cache_data(ttl=300)
+def load_all_predictions() -> dict[str, str]:
+    """Return {fixture_id: 'H-A'} using the most recently created prediction per fixture."""
+    df = query_df(
+        """
+        SELECT p.fixture_id, p.predicted_home, p.predicted_away
+        FROM predictions p
+        JOIN (
+            SELECT fixture_id, MAX(created_at) AS latest
+            FROM predictions
+            GROUP BY fixture_id
+        ) lp ON p.fixture_id = lp.fixture_id AND p.created_at = lp.latest
+        """
+    )
+    if df.empty:
+        return {}
+    return {
+        row["fixture_id"]: f"{int(row['predicted_home'])}-{int(row['predicted_away'])}"
+        for _, row in df.iterrows()
+    }
+
+
+@st.cache_data(ttl=300)
+def load_knockout_matchups() -> dict[str, str]:
+    """Return {fixture_id: 'TeamA v TeamB'} for every KO fixture with resolved teams."""
+    df = query_df("""
+        SELECT f.fixture_id, t1.name AS home, t2.name AS away
+        FROM fixtures f
+        JOIN teams t1 ON f.home_team_id = t1.team_id
+        JOIN teams t2 ON f.away_team_id = t2.team_id
+        WHERE f.stage != 'Group Stage'
+    """)
+    if df.empty:
+        return {}
+    return {
+        row["fixture_id"]: f"{row['home']} v {row['away']}"
+        for _, row in df.iterrows()
+    }
+
+
 @st.cache_data(ttl=3600)
 def load_group_standings() -> pd.DataFrame:
     return query_df(

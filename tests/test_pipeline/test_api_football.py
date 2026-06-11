@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """Tests for API-Football client with HTTP mocking."""
 import json
 

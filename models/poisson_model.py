@@ -7,6 +7,7 @@ scoreline are derived.
 """
 from __future__ import annotations
 
+import math
 import warnings
 from pathlib import Path
 
@@ -146,6 +147,37 @@ class PoissonModel:
             "predicted_home": es_h,
             "predicted_away": es_a,
         }
+
+    @classmethod
+    def from_elo_ratings(
+        cls,
+        team_ratings: dict[int, float],
+        base_elo: float = 1700.0,
+        scale: float = 3.0,
+    ) -> "PoissonModel":
+        """
+        Initialise a Poisson model from Elo ratings without fitting on match data.
+
+        attack[i] = defense[i] = log(elo_i / base_elo) * scale
+
+        home_lambda = exp(attack[home] - defense[away])
+                    = (elo_home / elo_away) ** scale
+
+        With scale=3.0 and base_elo=1700:
+          - Evenly matched teams  → 1-1
+          - Strong vs mid         → 1-0
+          - Top-10 vs weakest     → 2-0
+        """
+        model = cls()
+        model.team_ids = list(team_ratings.keys())
+        for tid, elo in team_ratings.items():
+            param = math.log(max(elo, 1.0) / base_elo) * scale
+            model.attack[tid] = param
+            model.defense[tid] = param
+        model.home_advantage = 0.0  # all WC 2026 matches at neutral venues
+        model.rho = 0.0  # no Dixon-Coles correction when initialising from Elo (no fitted data)
+        model._fitted = True
+        return model
 
     def save(self, path: str) -> None:
         Path(path).parent.mkdir(parents=True, exist_ok=True)
