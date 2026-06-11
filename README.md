@@ -36,11 +36,12 @@ External Sources
                                     ui/data_loader.py
                                             │
                          ┌──────────────────┼──────────────────┐
-                         ▼                  ▼                  ▼
-                  match_center          bracket_view        analytics
-                         └──────────────────┼──────────────────┘
+                     ▼              ▼              ▼              ▼
+              match_center    participants   analytics    bracket_view
+                     └──────────────┴──────────────┴──────────────┘
                                             ▼
                                   Streamlit UI :8501
+                          (Fixtures · Participants · Analytics · Bracket)
 ```
 
 ## Quick Start
@@ -93,7 +94,7 @@ Copy `.env.example` → `.env` and fill in both keys.
 ├── models/              # Poisson, XGBoost, LightGBM, ensemble, Monte Carlo simulator
 ├── predictions/         # Daily and bracket predictors, JSON snapshot writer
 ├── evaluation/          # Brier score, RPS, accuracy evaluation
-├── ui/                  # Streamlit app: match center, bracket view, analytics
+├── ui/                  # Streamlit app: fixtures, participants, analytics, bracket view
 ├── scripts/             # CLI tools: init DB, backfill Elo, train, evaluate
 ├── tests/               # pytest suite (HTTP mocks via responses library)
 ├── data/
@@ -189,6 +190,10 @@ pytest tests/ -v --cov=. --cov-report=term-missing
 # Lint + type-check
 ruff check . && mypy .
 ```
+
+## Further Reading
+
+See [`system_design.md`](./system_design.md) for a deeper look at the architecture, full data-flow walkthrough, free data source evaluation, and model improvement opportunities.
 
 ## Known Limitations
 
